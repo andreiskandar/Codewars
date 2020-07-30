@@ -6,9 +6,14 @@
 // isIsogram("aba") == false
 // isIsogram("moOse") == false // -- ignore letter case
 
-function isIsogram(s) {
-  const str = [...new Set(s.toLowerCase())];
-  return str.length === s.length;
+// function isIsogram(s) {
+//   const str = [...new Set(s.toLowerCase())];
+//   return str.length === s.length;
+// }
+
+// using regex
+function isIsogram(str) {
+  return !/(\w).*\1/i.test(str);
 }
 
-console.log(isogram('mooSe'));
+console.log(isIsogram('mooSe'));
