@@ -1,0 +1,31 @@
+// 6 kyu - Find the odd int
+
+// Given an array, find the integer that appears an odd number of times.
+
+// There will always be only one integer that appears an odd number of times.
+
+function findOdd(A) {
+  // const set = [...new Set(A)]
+  // console.log(set);
+  // let obj = {}
+  // const found = set.map((x,i) => {
+  //   let count = A.filter(el => el == x).length
+  //   return obj[x] = count
+  // })
+
+  // const tally =  A.reduce((tally, el) => {
+  //   tally[el] = (tally[el] || 0) +1
+  //   return tally
+  // }, {})
+
+  // const isOdd = num => num % 2 === 1
+
+  // for(let i in tally){
+  //   if(isOdd(tally[i])) return +i
+  // }
+
+  //SHORTEST solution using XOR operator
+  return A.reduce((a, b) => a ^ b);
+}
+
+console.log(findOdd([20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5]));
