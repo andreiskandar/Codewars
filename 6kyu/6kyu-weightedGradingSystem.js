@@ -39,14 +39,7 @@
 function beforeAndAfterGrades(categories, assessment) {
 	const totalWeight = categories.reduce((a, b) => a + b.weight, 0);
 	const found = categories.find(i => i.descr === assessment.descr);
-	const before = Math.ceil(
-		categories.reduce(
-			(acc, curr) =>
-				acc +
-				((curr.actualScoreSoFar / curr.maxScoreSoFar) * curr.weight) / 100,
-			0
-		) * 100
-	);
+	const before = Math.ceil(categories.reduce((acc, curr) => acc + ((curr.actualScoreSoFar / curr.maxScoreSoFar) * curr.weight) / 100, 0) * 100);
 	let newScore = 0;
 
 	if (totalWeight !== 100 || !found) return 'Invalid input!';
