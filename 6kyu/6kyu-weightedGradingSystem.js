@@ -70,22 +70,3 @@ function beforeAndAfterGrades(categories, assessment) {
 		newScore % 1 > 5 ? Math.ceil(newScore) : Math.floor(newScore)
 	];
 }
-
-var categories = [
-	{ descr: 'CWHW', weight: 35, actualScoreSoFar: 40, maxScoreSoFar: 50 },
-	{ descr: 'Proj', weight: 30, actualScoreSoFar: 40, maxScoreSoFar: 50 },
-	{ descr: 'Part', weight: 20, actualScoreSoFar: 40, maxScoreSoFar: 50 },
-	{ descr: 'TQ', weight: 15, actualScoreSoFar: 40, maxScoreSoFar: 50 }
-];
-var assessment = { descr: 'CWHW', actualScore: 45, maxScore: 50 };
-
-console.log(beforeAndAfterGrades(categories, assessment));
-
-//   categories = [{descr: "CWHW", weight: 35, actualScoreSoFar: 90, maxScoreSoFar: 100}, {descr: "Proj", weight: 30, actualScoreSoFar: 90, maxScoreSoFar: 100}, {descr: "Part", weight: 20, actualScoreSoFar: 90, maxScoreSoFar: 100}, {descr: "TQ", weight: 15, actualScoreSoFar: 90, maxScoreSoFar: 100}];
-//   assessment = {descr: "TQ", actualScore: 100, maxScore: 100};
-//   Test.assertSimilar(beforeAndAfterGrades(categories, assessment),[90, 91]);
-
-//   categories = [{descr: "CWHW", weight: 35, actualScoreSoFar: 90, maxScoreSoFar: 100}, {descr: "Proj", weight: 30, actualScoreSoFar: 90, maxScoreSoFar: 100}, {descr: "Part", weight: 20, actualScoreSoFar: 90, maxScoreSoFar: 100}, {descr: "TQ", weight: 15, actualScoreSoFar: 90, maxScoreSoFar: 100}];
-//   assessment = {descr: "Proj", actualScore: 0, maxScore: 100};
-//   Test.assertSimilar(beforeAndAfterGrades(categories, assessment),[90, 77]);
-// });
